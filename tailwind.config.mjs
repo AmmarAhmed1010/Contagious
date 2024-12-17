@@ -11,6 +11,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        gwendolyn: ['Gwendolyn', 'cursive'], // Add the custom font
+      },
+      fontSize: {
+        'custom-xl': '121.42px', // Add the custom font size
+      },
+      lineHeight: {
+        'custom-line': '157.84px', // Add the custom line height
+      },
     },
   },
   plugins: [],

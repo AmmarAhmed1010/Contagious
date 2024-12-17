@@ -56,7 +56,7 @@ const Navbar = () => {
       <div className="md:hidden flex items-center">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white text-2xl focus:outline-none"
+          className="text-white text-4xl focus:outline-none"
         >
           {isOpen ? "✕" : "☰"}
         </button>
