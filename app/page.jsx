@@ -48,8 +48,36 @@ export default function Home() {
           </div>
 
           {/* Center Section */}
-          <div className="center flex-1 flex items-center justify-center text-center">
-            <h1 className="text-3xl md:text-5xl font-bold">AWAKEN YOUR</h1>
+          <div className="center flex-1 flex-col text-center flex">
+            <div className="w-full text-center">
+            <h1 className="text-2xl font-bold">AWAKEN YOUR</h1>
+            </div>
+            <div className="lg:text-start text-center lg:pl-32">
+
+            <h1 className="text-[#7AFFFB] font-serif italic text-4xl sm:text-5xl lg:text-6xl">Divine</h1>
+            </div>
+            <h1>POWER</h1>
+            <h1>DEFEAT THE</h1>
+            <div className="w-full justify-center flex">
+            <div
+              className="flex flex-col rounded-md"
+              style={{
+                backgroundImage: "url('/section_1/img_vid.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "177px",
+                height: "260px",
+              }}
+              >
+              <div>
+                <h1 className="text-lg md:text-xl font-bold">ENEMY WITHIN.</h1>
+              </div>
+             
+            </div>
+              </div>
+              <div >
+            <button className="bg-[#07211E] text-sm px-20 py-4 text-white">SCROL DOWN</button>
+            </div>
           </div>
 
           {/* Right Section */}
@@ -63,7 +91,7 @@ export default function Home() {
               className="rounded-md"
             />
             {/* Book Info Section */}
-            <div className="flex h-[132px] px-4 bg-[#07211E] py-3 w-full flex-col justify-between items-center md:items-end gap-2 mt-4 rounded-md">
+            <div className="flex h-[132px] px-4 bg-[#07211E] py-3 w-[189px] flex-col justify-between  gap-2 mt-4 rounded-md">
               <h1 className="text-xl md:text-2xl font-bold">THE BOOK</h1>
               <div className="flex justify-end items-center gap-3">
                 <h1 className="text-lg md:text-xl font-bold">BUY</h1>
@@ -78,51 +106,65 @@ export default function Home() {
           </div>
         </div>
         {/* section1 */}
-        <div className="flex flex-col mt-10 lg:flex-row h-auto text-[white] lg:h-[550px]  justify-between">
-         
+          <div className="flex flex-col mt-10 lg:flex-row h-auto text-[white] lg:h-[550px]  justify-between">
+            <div className="right flex items-center lg:w-[30%] w-full mr-28">
+              <div>
+                <h1 className="text-[#7AFFFB] font-serif italic text-4xl sm:text-5xl lg:text-6xl">
+                  Read
+                </h1>
+                <h1 className="text-[20px] mb-2 lg:mb-16">THE BOOK</h1>
+                <h1 className="text-xl sm:text-2xl lg:text-[34px] ">
+                  AWAKENING THE
+                </h1>
+                <h1 className="text-xl sm:text-2xl lg:text-[34px] mb-6 lg:mb-10">
+                  DIVINE WITHIN.
+                </h1>
+                <p className="text-[#FFFFFFCC] text-sm lg:text-lg">
+                  Unlock your inner power and embrace your divine destiny with
+                  practical guidance and transformative insights in Awakening the
+                  Divine Within.
+                </p>
+              </div>
+            </div>
 
-          <div className="right flex items-center lg:w-[30%] w-full mr-28">
-            <div>
-              <h1 className="text-[#7AFFFB] font-serif italic text-4xl sm:text-5xl lg:text-6xl">
-                Read
-              </h1>
-              <h1 className="text-[20px] mb-2 lg:mb-16">THE BOOK</h1>
-              <h1 className="text-xl sm:text-2xl lg:text-[34px] ">AWAKENING THE</h1>
-              <h1 className="text-xl sm:text-2xl lg:text-[34px] mb-6 lg:mb-10">DIVINE WITHIN.</h1>
-              <p className="text-[#FFFFFFCC] text-sm lg:text-lg">
-              Unlock your inner power and embrace your divine destiny with practical guidance and transformative insights in Awakening the Divine Within.
-              </p>
+            <div className="relative w-1/2 h-[500px]">
+              {/* First Div - Small, Top Right */}
+              <div
+                className="absolute top-0 left-72 z-20"
+                style={{
+                  backgroundImage: "url('/section_2/img1.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  width: "250px",
+                  height: "250px",
+                }}
+              ></div>
+
+              <div className="absolute top-52 px-4 py-2 bg-[#07211E80]  w-[400px]  z-20">
+                <h1 className="font-bold mb-8">TESTIMONIAL</h1>
+                <div className="w-[210px]">
+                  <p className=" mb-8">
+                    Life changing. A must read for anyone seeking their true
+                    potential.
+                  </p>
+                </div>
+                <h1>SARAH K.</h1>
+              </div>
+              {/* Second Div - Large, Bottom Left */}
+              <div className="absolute bottom-0 w-[300px] h-[400px] right-0 z-10">
+                <video
+                  className="w-full h-full object-cover"
+                  src="/section_2/vid.mp4"
+                  autoPlay
+                  loop
+                  muted
+                ></video>
+              </div>
             </div>
           </div>
-
-          <div className="relative w-full lg:w-[30%] h-[500px]">
-            {/* First Div - Small, Top Right */}
-            <div
-              className="absolute top-0 right-0 z-20"
-              style={{
-                backgroundImage: "url('/section_2/img1.png')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "250px",
-                height: "250px",
-              }}
-            ></div>
-
-            {/* Second Div - Large, Bottom Left */}
-            <div className="absolute bottom-0 w-[300px] h-[400px] left-0 z-10">
-              <video
-                className="w-full h-full object-cover"
-                src="/section_2/vid.mp4"
-                autoPlay
-                loop
-                muted
-              ></video>
-            </div>
-          </div>
-        </div>
         {/* section2 */}
         <div className="flex flex-col-reverse my-10 lg:flex-row h-auto text-[white] lg:h-[550px]  justify-between">
-          <div className="relative w-full lg:w-[30%] h-[500px]">
+          <div className="relative w-[400px] mt-10 lg:w-[30%] h-[500px]">
             {/* First Div - Small, Top Right */}
             <div
               className="absolute top-0 right-0 z-20"
@@ -136,7 +178,7 @@ export default function Home() {
             ></div>
 
             {/* Second Div - Large, Bottom Left */}
-            <div className="absolute bottom-0 w-[300px] h-[400px] left-0 z-10">
+            <div className="absolute bottom-0 lg:w-[300px] w-[200px] h-[300px] lg:h-[400px] left-0 z-10">
               <video
                 className="w-full h-full object-cover"
                 src="/section_2/vid.mp4"
@@ -153,8 +195,12 @@ export default function Home() {
                 Watch
               </h1>
               <h1 className="text-[20px] mb-2 lg:mb-16">THE SHOW</h1>
-              <h1 className="text-xl sm:text-2xl lg:text-[34px] ">AWAKENING THE</h1>
-              <h1 className="text-xl sm:text-2xl lg:text-[34px] mb-6 lg:mb-10">DIVINE WITHIN.</h1>
+              <h1 className="text-xl sm:text-2xl lg:text-[34px] ">
+                AWAKENING THE
+              </h1>
+              <h1 className="text-xl sm:text-2xl lg:text-[34px] mb-6 lg:mb-10">
+                DIVINE WITHIN.
+              </h1>
               <p className="text-[#FFFFFFCC] text-sm lg:text-lg">
                 Uncover your potential. Dive into Awakening the Divine Within on
                 YouTube today and ignite your transformation.
