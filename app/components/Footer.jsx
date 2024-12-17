@@ -4,8 +4,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <>
-      <div className="px-5 md:px-10 py-8">
-        <div className="bg-[#07211E] rounded-2xl px-8 md:px-20 py-10">
+      <div className="px-4 md:px-10 py-8">
+        <div className="bg-[#07211E] rounded-2xl px-4 md:px-20 py-10">
           {/* Top Section */}
           <div className="top flex flex-wrap justify-between mb-16 gap-10">
             {/* Left Content */}
@@ -26,10 +26,17 @@ const Footer = () => {
             {/* Right Content */}
             <div className="right text-white w-full md:w-auto">
               <div className="mb-4 text-[#FFFFFF99] text-sm">
-                <h1>Subscribe to our newsletter</h1>
-                <h1>and keep in touch with us</h1>
+                <h1>Subscribe to our</h1>
+                <div className="flex items-center gap-2">
+                <h1>
+                  newsletter and keep
+                </h1>
+                {/* Line extending from Author */}
+                <div className="h-[1px] bg-white  flex-1"></div>
               </div>
-              <div className="flex flex-col md:flex-row items-center bg-[#010707] px-3 py-2 gap-2 rounded-3xl">
+                <h1>in touch with us</h1>
+              </div>
+              <div className="flex items-center bg-[#010707] px-3 py-2 gap-2 rounded-3xl">
                 <div className="bg-[#07211E] flex items-center px-3 py-1 rounded-2xl w-full md:w-auto">
                   <h6 className="text-sm text-[#FFFFFF99] truncate">
                     Hello@company.com
