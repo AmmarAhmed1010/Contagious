@@ -1,30 +1,13 @@
 import Image from "next/image";
+import Footer from "./components/Footer";
+import BuySection from "./components/BuySection";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
     <>
-      <div className="bg-black px-32">
-        <nav className="items-center py-8 flex justify-between">
-          <div className="logo">
-            <Image
-              src="/navbar/logo.png" // Path to the image file
-              alt="Description of the image" // Accessible text
-              width={134} // Desired width
-              height={204} // Desired height
-            />
-          </div>
-
-          <ul className="flex font-normal text-white gap-10">
-            <li>THE BOOK</li>
-            <li>THE SHOW</li>
-            <li>THE AUTHOR</li>
-            <li>BUY</li>
-          </ul>
-
-          <button className="bg-[#07211E] text-white px-20 py-4">
-            CONTACT
-          </button>
-        </nav>
+      <div className="bg-black px-4 md:px-10 lg:px-32">
+        <Navbar/>
 
         <div className="hero text-white gap-4 flex justify-between">
           {/* Left Section */}
@@ -89,72 +72,12 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* section4 */}
+        <BuySection />
       </div>
       {/* footer */}
-      <div className="px-10  py-8">
-        <div className="bg-[#07211E] rounded-2xl px-20 py-10">
-          <div className="top"></div>
-          <div className="center flex justify-between text-white">
-            <div>
-              <h1 className="font-bold pb-4">Quick links</h1>
-              <ul className="text-sm flex flex-col gap-3">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>The Book</li>
-                <li>The Show</li>
-                <li>The Author</li>
-              </ul>
-            </div>
-            <div>
-              <h1 className="font-bold pb-4">Contact</h1>
-              <ul className="text-sm flex flex-col gap-3">
-                <li>Faqs</li>
-                <li>Contact Us</li>
-                <li>Help</li>
-              </ul>
-            </div>
-            <div>
-              <h1 className="font-bold pb-4" >Support</h1>
-              <ul className="text-sm flex flex-col gap-3">
-                <li>Sitemap</li>
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-          </div>
-          <div className="bottom flex items-center justify-between">
-            <h1 className="text-gray-400 text-[18px]">
-              © Copyright 2024 | Contagious Power | All Rights Reserved.
-            </h1>
-            <div className="flex gap-2">
-              <div className="bg-black w-[55px] rounded-[50%] flex justify-center items-center h-[55px]">
-                <Image
-                  src="/footer/fb.png"
-                  alt="Description of the image"
-                  width={20}
-                  height={20}
-                />
-              </div>
-              <div className="bg-black w-[55px] rounded-[50%] flex justify-center items-center h-[55px]">
-                <Image
-                  src="/footer/link.png"
-                  alt="Description of the image"
-                  width={20}
-                  height={20}
-                />
-              </div>
-              <div className="bg-black w-[55px] rounded-[50%] flex justify-center items-center h-[55px]">
-                <Image
-                  src="/footer/insta.png"
-                  alt="Description of the image"
-                  width={100}
-                  height={100}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </>
   );
 }
