@@ -1,5 +1,7 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const cards = [
   { id: 1, title: "THE BOOK", image: "/section_4/img3.png" },
@@ -8,29 +10,41 @@ const cards = [
 ];
 
 const BuySection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="py-10">
-     <div className="relative text-center text-white mb-10 text-5xl">
-  <h1 className="relative z-10">BUY</h1>
-  <div className="absolute inset-0 flex items-center justify-center">
-    <div className="h-[1px] bg-[#FFFFFF66] w-full max-w-[400px]"></div>
-  </div>
-</div>
+      {/* Heading Section */}
+      <div className="relative text-center text-white mb-10 text-5xl">
+        <h1 data-aos="fade-down" className="relative z-10">
+          BUY
+        </h1>
+        <div className="absolute inset-0 flex items-center justify-center">
+          {/* Animated Line */}
+          <div
+            className="h-[1px] bg-[#FFFFFF66] w-0 max-w-[400px] 
+            animate-lineExpand"
+          ></div>
+        </div>
+      </div>
 
+      {/* Cards Section */}
       <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-10">
         {cards.map((card) => (
           <div
+            data-aos="fade-up"
             key={card.id}
-            className="flex flex-col  w-full 
-              h-[300px]     // Default height for mobile screens
-              sm:h-[400px]  // Medium height for tablets
-              lg:h-[500px]  // Larger height for desktops justify-between px-4 py-5"
+            className="flex flex-col w-full h-[300px] sm:h-[400px] lg:h-[500px] justify-between px-4 py-5"
             style={{
               backgroundImage: `url('${card.image}')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-           
           >
             <div>
               <h1 className="text-white text-lg font-semibold">{card.title}</h1>

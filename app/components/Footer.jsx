@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import React from 'react';
+import React from "react";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
               <h1 className="pt-1">DIVINE POTENTIAL</h1>
               <div className="flex items-center space-x-3 mt-2">
                 <h1>TODAY.</h1>
-                <Image
+                <img
                   src="/footer/footer_arrow.png"
                   alt="Arrow Icon"
                   width={50}
@@ -28,12 +28,9 @@ const Footer = () => {
               <div className="mb-4 text-[#FFFFFF99] text-sm">
                 <h1>Subscribe to our</h1>
                 <div className="flex items-center gap-2">
-                <h1>
-                  newsletter and keep
-                </h1>
-                {/* Line extending from Author */}
-                <div className="h-[1px] bg-white  flex-1"></div>
-              </div>
+                  <h1>newsletter and keep</h1>
+                  <div className="h-[1px] bg-white flex-1"></div>
+                </div>
                 <h1>in touch with us</h1>
               </div>
               <div className="flex items-center bg-[#010707] px-3 py-2 gap-2 rounded-3xl">
@@ -85,14 +82,15 @@ const Footer = () => {
               © Copyright 2024 | Contagious Power | All Rights Reserved.
             </h1>
             <div className="flex gap-2 justify-center md:justify-start w-full md:w-auto">
-              {['/footer/fb.png', '/footer/link.png', '/footer/insta.png'].map((src, index) => (
-                <div
-                  key={index}
-                  className="bg-black w-[45px] md:w-[55px] rounded-full flex justify-center items-center h-[45px] md:h-[55px]"
-                >
-                  <Image src={src} alt={`Social Icon ${index}`} width={20} height={20} />
-                </div>
-              ))}
+              <div className="bg-black w-[45px] md:w-[55px] rounded-full flex justify-center items-center h-[45px] md:h-[55px]">
+                <FaFacebookF className="text-white text-xl" />
+              </div>
+              <div className="bg-black w-[45px] md:w-[55px] rounded-full flex justify-center items-center h-[45px] md:h-[55px]">
+                <FaLinkedinIn className="text-white text-xl" />
+              </div>
+              <div className="bg-black w-[45px] md:w-[55px] rounded-full flex justify-center items-center h-[45px] md:h-[55px]">
+                <FaInstagram className="text-white text-xl" />
+              </div>
             </div>
           </div>
         </div>
